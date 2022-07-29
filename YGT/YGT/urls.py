@@ -32,6 +32,12 @@ urlpatterns = [
 
     path('mentocategory', views.mento_category, name='mentocategory'),
     path('friendcategory', views.friend_category, name='friendcategory'),
+
+    #댓글 작성
+    path('new_mentocomment/<int:post_id>', views.new_mentocomment, name='new_mentocomment'),
+
+    #좋아요
+    path('mentopost_like/<int:post_id>', views.mentopost_like, name='mentopost_like'),
     
     path('mento_detail/<int:post_id>', views.mento_detail, name='mentodetail'),
     path('friend_detail/<int:post_id>', views.friend_detail, name='frienddetail'),

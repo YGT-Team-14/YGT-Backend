@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render, get_object_or_404
-from .forms import Mento_PostModelForm, Friend_PostModelForm
-from .models import Mento_Post, Friend_Post
+from .forms import Mento_PostModelForm, Friend_PostModelForm, CommentForm
+from .models import Mento_Post, Friend_Post, Profile
 
 
 def home(request):
@@ -81,3 +81,31 @@ def friend_delete(request, post_id):
     post = Friend_Post.objects.get(id=post_id)
     post.delete()
     return redirect('/')
+
+#멘토 댓글 
+def new_mentocomment(request,post_id):
+    post = get_object_or_404(Mento_Post, pk=post_id)
+    filled_form = CommentForm(request.POST)
+    if filled_form.is_valid():
+        finished_form = filled_form.save(commit=False)
+        finished_form.writer = request.user
+        finished_form.post = get_object_or_404(Mento_Post, pk=post_id)
+        finished_form.writer_profile = get_object_or_404(Profile, pk=request.user.id)
+        finished_form.save()
+    return redirect('/mento_detail/'+str(post_id),{'post':post})
+
+#멘토 좋아요 게시글
+def mentopost_like(request,post_id):
+    post = get_object_or_404(Mento_Post, pk=post_id)
+    user = request.user
+    profile = Profile.objects.get(user=user)
+    if profile.like_mentopost.filter(id=post_id).exists():
+        profile.like_mentopost.remove(post)
+        post.like_count -= 1
+        post.save()
+    else:
+        profile.like_mentopost.add(post)
+        post.like_count += 1
+
+        post.save()
+    return redirect('/mento_detail/'+str(post_id),{'post':post})
