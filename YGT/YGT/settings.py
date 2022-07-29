@@ -119,12 +119,20 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+import os
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = '/users/login/'          # 로그인 URL
-LOGIN_REDIRECT_URL = '/users/main/'  # 로그인 후 URL
+LOGIN_URL = '/login/'          # 로그인 URL
+LOGIN_REDIRECT_URL = '/main/'  # 로그인 후 URL
 LOGOUT_REDIRECT_URL = '/'            # 로그아웃 후 URL
 AUTH_USER_MODEL = "users.User"       # 커스텀 인증 모델

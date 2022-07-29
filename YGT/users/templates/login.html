@@ -22,7 +22,8 @@
 					<img src="../../static/img/logoIcon.svg" />
 					<div class="TopText">만나서 반가워요 !</div>
 				</section>
-				<form class="LoginInputs">
+				<form class="LoginInputs" method="POST">
+					{% csrf_token %}
 					<p>로그인</p>
 					<input type="text" name="user_id" placeholder="이메일" id="ID" />
 					<p>비밀번호</p>
@@ -38,9 +39,9 @@
 					<hr />
 					<div class="BottomText">
 						<p>아직 계정이 없으신가요?</p>
-						<button class="GoSignupBtn" onClick="location.href='login.html'">
+						<a class="GoSignupBtn" href="{% url 'signup' %}">
 							회원가입 하기
-						</button>
+						</a>
 					</div>
 				</section>
 			</section>

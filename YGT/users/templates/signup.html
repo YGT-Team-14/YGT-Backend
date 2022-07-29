@@ -15,23 +15,25 @@
 	<body>
 		<div id="SignupWrapper">
 			<p class="SignupTitle">짝선짝후 회원가입</p>
-			<form class="SignupInputs">
+			<form class="SignupInputs" method="POST">
+				{% csrf_token %}
 				<input name="user_id" id="email" placeholder="이메일 주소" />
 				<input name="password" id="pw" placeholder="비밀번호" />
 				<input name="school" id="univ" placeholder="학교 이름" />
 			</form>
-			<form class="InputDetails">
+			<form class="InputDetails" method="POST">
+				{% csrf_token %}
 				<input name="major" id="dep" placeholder="학과" />
 				<input name="student_id" id="class" placeholder="학번" />
 			</form>
-			<button class="SignupBtn">가입 하기</button>
+			<a class="SignupBtn" href="{% url 'home' %}">가입 하기</a>
 			<section class="LoginBottom">
 				<hr />
 				<div class="BottomText">
 					<p>계정이 있으신가요?</p>
-					<button class="GoLoginBtn" onClick="location.href='{% url 'login'}'">
+					<a class="GoLoginBtn" href="{% url 'login' %}">
 						로그인 하기
-					</button>
+					</a>
 				</div>
 			</section>
 		</div>
