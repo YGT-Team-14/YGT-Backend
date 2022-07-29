@@ -1,9 +1,10 @@
 from pyexpat.errors import messages
 from django.core.exceptions import PermissionDenied
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from YGT.users.models import User
 from .forms import CsRegisterForm
 from django.views.generic import CreateView 
+
  
 class CsRegisterView(CreateView):
     model = User

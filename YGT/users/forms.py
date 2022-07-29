@@ -24,4 +24,4 @@ class CsRegisterForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['user_id', 'password1', 'password2',   'student_id', 'major']
+        fields = [ 'user_id', 'school', 'password1', 'password2',   'student_id', 'major']
