@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#HomeHeader {
+	width: 100%;
+	height: 88px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.HeaderLeft {
+	margin-left: 103px;
+	display: flex;
+}
+.logoText {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	color: #569eb8;
+	margin-left: 20px;
+}
+.HeaderRight {
+	display: flex;
+	font-weight: 700;
+	font-size: 22px;
+	margin-right: 114px;
+}
+.HeaderRight p {
+	margin: 7px 27px 0 0;
+}
+.CenterTitle {
+	font-weight: 400;
+	font-size: 36px;
+	z-index: 3;
+	color: rgba(55, 63, 65, 0.5);
+	position: absolute;
+	top: 109px;
+	right: 162px;
+}
+.CenterBackground {
+	width: 100%;
+}
+.Goboard1 {
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 400px;
+	height: 77px;
+	left: 324px;
+	top: 455px;
+	background: #edca5f;
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 20px;
+}
+.Goboard2 {
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 400px;
+	height: 77px;
+	left: 724px;
+	top: 455px;
+	background-color: #569eb8;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 20px;
+}
+#HomeCenter {
+	width: 100%;
+	height: 636px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.CenterLeft {
+	font-size: 36px;
+	display: flex;
+	flex-direction: column;
+	letter-spacing: 0.2px;
+	margin-right: 150px;
+	color: #373f41;
+}
+.BoldText {
+	font-weight: 600;
+}
+.ExText {
+	margin-top: 30px;
+	font-weight: 400;
+	font-size: 20px;
+	color: #373f41;
+}
+.GotoPlus {
+	margin-top: 50px;
+	font-weight: 600;
+	font-size: 20px;
+}
+.CenterRight {
+	width: 647px;
+	height: 319px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+#HomeBottom {
+	width: 100%;
+	height: 500px;
+}
+.BottomTitle {
+	display: flex;
+	width: 309px;
+	height: 48px;
+	font-size: 32px;
+	margin-left: 220px;
+}
+.BottomTitle p:first-child {
+	font-weight: 700;
+}
+.FoodEx {
+	margin: 30px 0 0 220px;
+	width: 1111px;
+	height: 166px;
+	display: flex;
+}
+.FoodEx img {
+	margin-right: 30px;
+}
+.TextContainers {
+	display: flex;
+	width: 1111px;
+	height: 76px;
+	text-align: center;
+	margin: 20px 0 0 280px;
+}
+.TextContainer {
+	margin-right: 130px;
+}
+.TextContainer p:first-child {
+	font-weight: 700;
+	font-size: 18px;
+	color: #373f41;
+}
+#HomeFooter {
+	width: 100%;
+	height: 64px;
+	background-color: #373f41;
+}

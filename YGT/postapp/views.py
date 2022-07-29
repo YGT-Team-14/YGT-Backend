@@ -4,7 +4,7 @@ from .models import Mento_Post, Friend_Post
 
 
 def home(request):
-    return render(request,'index.html')
+    return render(request,'home.html')
 
 def mento_createpost(request):
     if (request.method == 'POST' or request.method == 'FILES'):

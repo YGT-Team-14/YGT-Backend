@@ -15,8 +15,9 @@
 	<body>
 		<div id="SignupWrapper">
 			<p class="SignupTitle">짝선짝후 회원가입</p>
-			<form class="SignupInputs" method="POST">
+			<form class="SignupInputs" method="POST" action="{% url 'signup' %}">
 				{% csrf_token %}
+				{% for field in form %}
 				<input name="user_id" id="email" placeholder="이메일 주소" />
 				<input name="password" id="pw" placeholder="비밀번호" />
 				<input name="school" id="univ" placeholder="학교 이름" />

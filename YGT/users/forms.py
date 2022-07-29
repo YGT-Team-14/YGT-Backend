@@ -17,11 +17,11 @@ class CsRegisterForm(UserCreationForm):
             'class': 'form-control',
             'autofocus': False
         })
-        self.fields['password1'].label = '비밀번호'
-        self.fields['password1'].widget.attrs.update({
+        self.fields['password'].label = '비밀번호'
+        self.fields['password'].widget.attrs.update({
             'class': 'form-control',
         })
 
     class Meta:
         model = User
-        fields = [ 'user_id', 'school', 'password1', 'password2',   'student_id', 'major']
+        fields = [ 'user_id', 'school', 'password', 'student_id', 'major']

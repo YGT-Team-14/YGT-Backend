@@ -28,8 +28,24 @@ class CsRegisterView(CreateView):
         return redirect(self.get_success_url())
 
 def login(request):
-    return render(request,'login.html')
+    if request.method == "POST":
+        user_id = request.POST["user_id"]
+        password = request.POST["password"]
+        user = auth.authenticate(request, user_id=user_id, password=password)
 
+        if user is not None:
+            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            return redirect('home')
+        else: 
+            #잘못된 로그인
+            return render(request, 'home.html')
+    else:
+        return render(request, 'login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('home')
+    
 def signup(request):
     if request.method == "POST":
         #회원가입

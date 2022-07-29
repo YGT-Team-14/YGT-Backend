@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{% static 'css/home.css'%}" type="text/css"/>
+        <title>Home</title>
+	</head>
+	<body>
+		<div id="HomeWrapper">
+			<section id="HomeHeader">
+				<div class="HeaderLeft">
+					<img src="../../static/img/logoIcon.svg" width="36px" />
+					<p class="logoText">짝선 짝후</p>
+				</div>
+				<div class="HeaderRight">
+					<p>이름님</p>
+					<img src="../../static/img/userIcon.svg" />
+				</div>
+			</section>
+			<section id="HomeTop">
+				<div class="CenterTitle">
+					<p>대학생활은</p>
+					<p>짝선짝후와 함께하세요</p>	
+				</div>
+                <img class="CenterBackground" src="../../static/img/mainImage.svg">
+                <div class="GoBoardsBtn">
+                    <a class="Goboard1" href="{% url 'friendcategory' %}">더 많은 꿀팁 얻으러 가기</a>
+                    <a class="Goboard2" href="{% url 'mentocategory' %}">나만의 짝꿍 찾으러 가기</a>
+                </div>
+            </section>
+            <section id="HomeCenter">
+                <div class="CenterLeft">
+                    <p>대학생을 위한</p>
+                    <p class="BoldText">무료 사이트</p>
+                    <div class="ExText">
+                        <p>논문은 어디서 찾지?</p>
+                        <p>과제할때 필요한 자료를 무료로 구하고 싶은데..</p>
+                        <P>걱정마세요 여러분들을 위해 추천 사이트를 엄선했어요!</p>
+                    </div>
+                    <div class="GotoPlus">더 보러 가기></div>
+                </div>
+                <div class="CenterRight">
+                    <img src="../../static/img/site1.svg">
+                    <img src="../../static/img/site2.svg">
+                    <img src="../../static/img/site3.svg">
+                    <img src="../../static/img/site4.svg">
+                    <img src="../../static/img/site5.svg">
+                    <img src="../../static/img/site6.svg">
+                </div>
+            </section>
+            <section id="HomeBottom">
+                <div class="BottomTitle"><p>추천맛집</p><p>도 둘러보세요</p></div>
+                <div class="FoodEx">
+                    <img src="../../static/img/food1.svg">
+                    <img src="../../static/img/food2.svg">
+                    <img src="../../static/img/food3.svg">
+                    <img src="../../static/img/food4.svg">
+                </div>
+                <div class="TextContainers">
+                    <div class="TextContainer">
+                        <p>양키스 그릴</p>
+                        <p>서울 영등포구 도림로 434-9</p>
+                        <p>#문래감성</p>
+                    </div>
+                    <div class="TextContainer">
+                        <p>미분당</p>
+                        <p>서울 종로구 창경궁로 234 </p>
+                        <p>#혼밥플레이스</p>
+                    </div>
+                    <div class="TextContainer">
+                        <p>이유식당</p>
+                        <p>서울 종로구 창경궁로26길 41-3 1층</p>
+                        <p>#밥집</p>
+                    </div>
+                    <div class="TextContainer">
+                        <p>신선식탁</p>
+                        <p>서울 종로구 율곡로13가길 4</p>
+                        <p>#샐러드맛집</p>
+                    </div>
+                </div>
+            </section>
+            <section id="HomeFooter">
+                <img src="../../static/img/Footer.svg"/>
+            </section>
+	</body>
+</html>
