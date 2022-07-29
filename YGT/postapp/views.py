@@ -40,7 +40,8 @@ def friend_category(request):
 
 def mento_detail(request, post_id):
     post_detail = get_object_or_404(Mento_Post, pk=post_id)
-    return render(request, 'mento_detail.html', {'post_detail':post_detail})
+    comment_form = CommentForm()
+    return render(request, 'mento_detail.html', {'post_detail':post_detail,"comment_form":comment_form,})
 
 def friend_detail(request, post_id):
     post_detail = get_object_or_404(Friend_Post, pk=post_id)
