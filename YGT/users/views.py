@@ -45,19 +45,20 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('home')
-    
+
 def signup(request):
     if request.method == "POST":
-        #회원가입
-        user = User.objects.create_user(
-            user_id=request.POST['user_id'], 
-            school=request.POST['school'], 
-            major=request.POST['major'], 
-            student_id=request.POST['student_id'])
-        #로그인
-        auth.login(request, user)
-        #홈리다이렉션
-        return redirect('home')
+        if request.POST['password'] == request.POST['student_id']:
+            #회원가입
+            user = User.objects.create_user(
+                user_id=request.POST['user_id'], 
+                school=request.POST['school'], 
+                major=request.POST['major'], 
+                student_id=request.POST['student_id'])
+            #로그인
+            auth.login(request, user)
+            #홈리다이렉션
+            return redirect('home')
     else:
         form=CsRegisterForm
         return render(request,'signup.html', {'form':form})

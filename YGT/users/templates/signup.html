@@ -1,42 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="{% static 'css/signup.css'%}"
-			type="text/css"
-		/>
-		<title>Signup</title>
-	</head>
-	<body>
-		<div id="SignupWrapper">
-			<p class="SignupTitle">짝선짝후 회원가입</p>
-			<form class="SignupInputs" method="POST" action="{% url 'signup' %}">
-				{% csrf_token %}
-				{% for field in form %}
-				<input name="user_id" id="email" placeholder="이메일 주소" />
-				<input name="password" id="pw" placeholder="비밀번호" />
-				<input name="school" id="univ" placeholder="학교 이름" />
-			</form>
-			<form class="InputDetails" method="POST">
-				{% csrf_token %}
-				<input name="major" id="dep" placeholder="학과" />
-				<input name="student_id" id="class" placeholder="학번" />
-			</form>
-			<a class="SignupBtn" href="{% url 'home' %}">가입 하기</a>
-			<section class="LoginBottom">
-				<hr />
-				<div class="BottomText">
-					<p>계정이 있으신가요?</p>
-					<a class="GoLoginBtn" href="{% url 'login' %}">
-						로그인 하기
-					</a>
-				</div>
-			</section>
-		</div>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="{% static 'css/signup.css'%}" type="text/css" />
+	<title>Signup</title>
+</head>
+
+<body>
+	<div id="SignupWrapper">
+		<p class="SignupTitle">짝선짝후 회원가입</p>
+		<form class="SignupInputs" method="POST" action="{% url 'signup' %}">
+			{% csrf_token %}
+			<div>{{ form.user_id.label }}</div>
+			<div>{{ form.user_id }}</div>
+			<div>{{ form.password.label }}</div>
+			<div>{{ form.password }}</div>
+			<div>{{ form.school.label }}</div>
+			<div>{{ form.school }}</div>
+			<div>{{ form.major.label }}</div>
+			<div>{{ form.major }}</div>
+			<div>{{ form.student_id.label }}</div>
+			<div>{{ form.student_id }}</div>
+		</form>
+		<a class="SignupBtn" href="{% url 'home' %}">가입 하기</a>
+		<section class="LoginBottom">
+			<hr />
+			<div class="BottomText">
+				<p>계정이 있으신가요?</p>
+				<a class="GoLoginBtn" href="{% url 'login' %}">
+					로그인 하기
+				</a>
+			</div>
+		</section>
+	</div>
+</body>
+
 </html>

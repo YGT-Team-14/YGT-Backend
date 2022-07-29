@@ -25,3 +25,9 @@ class CsRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = [ 'user_id', 'school', 'password', 'student_id', 'major']
+
+    def save(self, commit=True):
+        user = super(CsRegisterForm, self).save(commit=False)
+        user.save()
+
+        return user

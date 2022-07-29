@@ -25,7 +25,8 @@ urlpatterns = [
     path('login', userview.login, name='login'),
     path('signup', userview.signup, name='signup'),
 
-    path('', views.home, name='home'),
+    path('', views.intro, name='intro'),
+    path('home', views.home, name='home'),
 
     path('mentocreatepost', views.mento_createpost, name='mentocreatepost'),
     path('friendcreatepost', views.friend_createpost, name='friendcreatepost'),

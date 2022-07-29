@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/intro.css'%}" />
+        <title>Intro</title>
+    </head>
+	<body>
+		<div id="IntroWrapper">
+			<section id="IntroHeader">
+				<div class="Logo">
+					<img src="../../static/img/logoIcon.svg" />
+					<p>짝선 짝후</p>
+				</div>
+				<div class="HeaderRight">
+					<div class="HeaderText">Login</div>
+					<a class="ToLoginBtn" href="{% url 'login' %}"> 시작하기 </a>
+				</div>
+			</section>
+			<section id="IntroTop">
+				<div class="TextBox">
+					<div class="TopText1">짝선 짝후가 뭔가요?</div>
+					<div class="TopText2">
+						<p>같은 학교 학생들의 교류를 위해 만들어진 웹서비스 ‘짝선짝후’</p>
+						<p>자신과 맞는 짝꿍을 찾고 싶을 땐 언제든지 이곳으로 오세요.</p>
+						<p>선배의 도움이 필요한 후배, 후배들에게 경험을 공유하고 싶은</p>
+						<p>
+							선배, 새로운 인연을 만들어가고 싶은 사람들 모두가 함께 할 수
+							있습니다.
+						</p>
+						<p>
+							다양한 학우들이 모여있는 이곳에서 코로나 이전 일상의 추억들을
+							만들어보세요!
+						</p>
+					</div>
+				</div>
+				<div class="TopBoardEx">
+					<img src="../../static/img/boardEx.svg" />
+				</div>
+			</section>
+			<section id="IntroCenter">
+				<div class="CenterTitle">이런 분들에게 추천해요</div>
+				<div class="CenterBoxWrapper">
+					<div class="CenterBox">
+						<img src="../../static/img/introIcon1.svg" />
+						<div class="BoxTitle1">보장된 선배에게 조언을 얻고 싶어요.</div>
+						<p>중요한 일인만큼 확실히 보장된 사람에게</p>
+						<p>언제 어디서든 부담없이 도움을 받을 수 있어요</p>
+					</div>
+					<div class="CenterBox">
+						<img src="../../static/img/introIcon2.svg" />
+						<div class="BoxTitle2">
+							학교의 지식인들이 모여있는 곳은 없을까요?
+						</div>
+						<p>우리 주변에서 질문을 잘 받아주던 능력있는 학우들,</p>
+						<p>학교 버전의 지식인들을 이곳에서 만날 수 있어요</p>
+					</div>
+					<div class="CenterBox">
+						<img src="../../static/img/introIcon3.svg" />
+						<div class="BoxTitle3">안심하고 번개모임에 참여하고 싶어요</div>
+						<p>본인인증의 가입절차가 필요해요</p>
+						<p>그러니 서로의 정보를 알고있는 상태에서</p>
+						<p>안심하고 즐기기만 하세요!</p>
+					</div>
+					<div class="CenterBox">
+						<img src="../../static/img/introIcon4.svg" />
+						<div class="BoxTitle4">
+							<div class="BoxTitle">안심하고 번개모임에 참여하고 싶어요</div>
+							<p>코로나로 인해 단절되었던 교류를 시작해보아요</p>
+							<p>다시 학우들과의 교류를 통해 학교시스템을</p>
+							<p>이해하고 즐겁게 학교생활에 참여해요</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="IntroBottom">
+				<img src="../../static/img/imageBox.svg" />
+				<div class="BottomRight">
+					<img src="../../static/img/quoteIcon.svg" width="64px" />
+					<div class="BottomText">
+						<p>선배들의 후기</p>
+						<p>코로나로 무료하던 일상에서</p>
+						<p>학교내 새로운 인연을 만들 수 있었어요</p>
+					</div>
+				</div>
+			</section>
+			<section id="IntroFooter">
+				<div class="GoLoginContainer">
+					<div class="FooterText1">나만의 짝꿍 찾을 준비 돼셨나요?</div>
+					<div class="FooterText2">
+						<p>Take control of your Business Data.</p>
+						<p>Try saas to make your business</p>
+					</div>
+					<a class="GoLoginBtn" href="{% url 'login' %}"> 시작하기 </a>
+				</div>
+				<div class="Footer">© Jjackfriends. All rights reserved.</div>
+			</section>
+		</div>
+	</body>
+</html>

@@ -6,6 +6,9 @@ from .models import Mento_Post, Friend_Post
 def home(request):
     return render(request,'home.html')
 
+def intro(request):
+    return render(request,'intro.html')
+
 def mento_createpost(request):
     if (request.method == 'POST' or request.method == 'FILES'):
         form = Mento_PostModelForm(request.POST, request.FILES)
