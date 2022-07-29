@@ -1,0 +1,188 @@
+* {
+	margin: 0;
+}
+#IntroWrapper {
+	width: 100%;
+	font-family: 'Noto Sans KR', sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+#IntroHeader {
+	width: 100%;
+	height: 88px;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.Logo {
+	width: 150px;
+	justify-content: space-evenly;
+	display: flex;
+	height: 32px;
+	margin-left: 165px;
+	font-weight: 700;
+	font-size: 24px;
+	color: #569eb8;
+}
+.HeaderRight {
+	width: 160px;
+	display: flex;
+	margin-right: 165px;
+	align-items: center;
+}
+.HeaderText {
+	margin-right: 20px;
+	color: #569eb8;
+}
+.ToLoginBtn {
+	border-style: none;
+	width: 100px;
+	height: 50px;
+	background-color: #569eb8;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+#IntroTop {
+	width: 100%;
+	height: 672px;
+	background-color: #fffdf7;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.TextBox {
+	margin-bottom: 100px;
+	color: #373f41;
+}
+.TopText1 {
+	font-weight: 700;
+	font-size: 44px;
+	margin-bottom: 20px;
+}
+.TopText2 {
+	width: 445px;
+	line-height: 30px;
+	font-weight: 500;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+#IntroCenter {
+	width: 100%;
+	height: 750px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.CenterTitle {
+	font-weight: 700;
+	font-size: 32px;
+	color: #373f41;
+	margin-top: 100px;
+	letter-spacing: 0.1px;
+}
+.CenterBoxWrapper {
+	width: 900px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	margin: 80px 0 0 0;
+}
+.CenterBox {
+	width: 350px;
+	height: 139px;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.BoxTitle1,
+.BoxTitle2,
+.BoxTitle3,
+.BoxTitle4 {
+	font-weight: 700;
+	font-size: 18px;
+	margin-top: 26px;
+}
+
+.CenterBox img {
+	width: 45px;
+}
+.CenterBox p {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #373f41;
+	text-align: center;
+}
+#IntroBottom {
+	height: 800px;
+	display: flex;
+	align-items: center;
+	padding-left: 200px;
+	background-color: #f5f5f5;
+}
+.BottomRight {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+}
+.BottomText {
+	margin-top: 20px;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 40px;
+	color: #373f41;
+	letter-spacing: 0.5 px;
+}
+#IntroFooter {
+	display: flex;
+	flex-direction: column;
+}
+.GoLoginContainer {
+	height: 348px;
+	background-color: #fffdf7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.FooterText1 {
+	font-weight: 700;
+	font-size: 32px;
+	color: #373f41;
+}
+.FooterText2 {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #737b7d;
+}
+.GoLoginBtn {
+	border-style: none;
+	background-color: #569eb8;
+	width: 117px;
+	height: 48px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+.Footer {
+	height: 64px;
+	background-color: #373f41;
+	padding-top: 40px;
+	font-weight: 600;
+	font-size: 12px;
+	text-align: center;
+	color: #c3cbcd;
+}
