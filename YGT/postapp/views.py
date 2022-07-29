@@ -43,8 +43,9 @@ def friend_category(request):
 
 def mento_detail(request, post_id):
     post_detail = get_object_or_404(Mento_Post, pk=post_id)
+    profile_detail = get_object_or_404(Profile, pk=request.user.id)
     comment_form = CommentForm()
-    return render(request, 'mento_detail.html', {'post_detail':post_detail,"comment_form":comment_form,})
+    return render(request, 'mento_detail.html', {'post_detail':post_detail,"comment_form":comment_form,"profile_detail":profile_detail})
 
 def friend_detail(request, post_id):
     post_detail = get_object_or_404(Friend_Post, pk=post_id)
@@ -105,10 +106,14 @@ def mentopost_like(request,post_id):
     if profile.like_mentopost.filter(id=post_id).exists():
         profile.like_mentopost.remove(post)
         post.like_count -= 1
+        profile.likes -= 1
+        profile.save()
         post.save()
     else:
         profile.like_mentopost.add(post)
         post.like_count += 1
+        profile.likes += 1
+        profile.save()
 
         post.save()
     return redirect('/mento_detail/'+str(post_id),{'post':post})

@@ -42,4 +42,5 @@ class Profile(models.Model):
     user = models.OneToOneField('users.User', on_delete=models.CASCADE)
 
     # 좋아요
-    like_mentopost = models.ManyToManyField(Mento_Post, blank=True,related_name='like_users') 
+    like_mentopost = models.ManyToManyField(Mento_Post, blank=True,related_name='like_users')
+    likes =  models.PositiveIntegerField(default=36)
