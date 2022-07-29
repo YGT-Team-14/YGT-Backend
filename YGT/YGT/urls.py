@@ -41,4 +41,10 @@ urlpatterns = [
     path('detail/<int:post_id>/mentodelete',views.mento_delete, name="mentodelete"),
     path('detail/<int:post_id>/friendupdate',views.friend_update, name="friendupdate"),
     path('detail/<int:post_id>/frienddelete',views.friend_delete, name="frienddelete"),
+
+    #댓글 작성
+    path('new_mentocomment/<int:post_id>', views.new_mentocomment, name='new_mentocomment'),
+
+    #좋아요
+    path('mentopost_like/<int:post_id>', views.mentopost_like, name='mentopost_like'),
 ]

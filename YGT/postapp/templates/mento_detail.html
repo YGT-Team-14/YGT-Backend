@@ -5,9 +5,38 @@
     <p>제목: {{ post_detail.title }}</p>
     <p>내용:</p>
     <p>{{ post_detail.post }}</p>
+    <p>좋아요 수 :{{post_detail.like_count}}</p>
+    <div>
+        <form action="{% url 'mentopost_like' post_detail.id %}" method='POST'>
+          {% csrf_token %}
+          {% if post_detail in profile.like_mentopost.all %}
+            <input type="submit" value='좋아요 취소'>
+          {% else %}
+            <input type="submit" value='좋아요'>
+          {% endif %}
+        </form>
+      </div>
 </div>
+
 
 <div class="text-center">
     <span class="text-center"><a href="{% url 'mentoupdate' post_detail.id %}">수정하기</a></span>
     <span class="text-center"><a href="{% url 'mentodelete' post_detail.id %}">삭제하기</a></span>
 </div>
+
+<hr>
+<!--댓글 목록 공간-->
+{% for comment in post_detail.mento_comment_set.all %}
+    <p> {{ comment }} </p>
+    <p> {{ comment.date }} </p>
+    <p> {{ comment.writer }} </p>
+    </br>
+    <hr>
+{% endfor %}
+
+<!--댓글 입력 공간-->
+<form method="POST" action="{% url 'new_mentocomment' post_detail.id %}">
+    {% csrf_token %}
+    {{ comment_form }}
+    <input type="submit" value="댓글 입력">
+</form>
