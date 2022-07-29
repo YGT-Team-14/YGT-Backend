@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from postapp import views
+from users import views as userview
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls')),
+
+    path('login', userview.login, name='login'),
+    path('signup', userview.signup, name='signup'),
+
     path('', views.home, name='home'),
 
     path('mentocreatepost', views.mento_createpost, name='mentocreatepost'),
