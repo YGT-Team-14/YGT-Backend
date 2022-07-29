@@ -1,0 +1,13 @@
+<h2>멘토멘티 게시글 보이는 곳</h2>
+<div class="container">
+    <p>{{ post_detail.author.username }}</p>
+    <p>{{ post_detail.date | date:'Y-m-d' }}</p>
+    <p>제목: {{ post_detail.title }}</p>
+    <p>내용:</p>
+    <p>{{ post_detail.post }}</p>
+</div>
+
+<div class="text-center">
+    <span class="text-center"><a href="{% url 'mentoupdate' post_detail.id %}">수정하기</a></span>
+    <span class="text-center"><a href="{% url 'mentodelete' post_detail.id %}">삭제하기</a></span>
+</div>

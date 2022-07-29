@@ -1,0 +1,9 @@
+<h1> 꿀팁 게시글 수정하기</h1>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{update_form.as_table}}
+    </table>
+    <br>
+    <button type="submit" class="btn btn-danger">작성완료</button>
+</form>

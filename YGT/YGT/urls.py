@@ -15,9 +15,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from postapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
+    path('', views.home, name='home'),
+
+    path('mentocreatepost', views.mento_createpost, name='mentocreatepost'),
+    path('friendcreatepost', views.friend_createpost, name='friendcreatepost'),
+
+    path('mentocategory', views.mento_category, name='mentocategory'),
+    path('friendcategory', views.friend_category, name='friendcategory'),
+    
+    path('mento_detail/<int:post_id>', views.mento_detail, name='mentodetail'),
+    path('friend_detail/<int:post_id>', views.friend_detail, name='frienddetail'),
+
+    path('detail/<int:post_id>/mentoupdate',views.mento_update, name="mentoupdate"),
+    path('detail/<int:post_id>/mentodelete',views.mento_delete, name="mentodelete"),
+    path('detail/<int:post_id>/friendupdate',views.friend_update, name="friendupdate"),
+    path('detail/<int:post_id>/frienddelete',views.friend_delete, name="frienddelete"),
 ]

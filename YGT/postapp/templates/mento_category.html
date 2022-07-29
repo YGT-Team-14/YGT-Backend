@@ -1,0 +1,13 @@
+<h1>멘토멘티 게시판</h1>
+
+{% for post in posts %}
+<table width="90%">
+    <tr>
+        <td width="30%"><a href="{% url 'mentodetail' post.id %}">{{ post.title }}</a></td>
+        <td width="30%">{{ post.date | date:'Y-m-d' }}</td>
+        <td width="30%">{{ post.author.username }}</td>
+    </tr>
+</table><br>
+{% endfor %}<br>
+
+<a href="{% url 'mentocreatepost' %}"><button class="btn btn-warning">리뷰 작성</button></a>

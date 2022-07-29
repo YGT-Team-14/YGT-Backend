@@ -1,0 +1,13 @@
+<h1>꿀팁 게시판</h1>
+
+{% for post in posts %}
+<table width="90%">
+    <tr>
+        <td width="30%"><a href="{% url 'frienddetail' post.id %}">{{ post.title }}</a></td>
+        <td width="30%">{{ post.date | date:'Y-m-d' }}</td>
+        <td width="30%">{{ post.author.username }}</td>
+    </tr>
+</table><br>
+{% endfor %}<br>
+
+<a href="{% url 'friendcreatepost' %}"><button>글 작성</button></a>
