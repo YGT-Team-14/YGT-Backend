@@ -1,1 +1,49 @@
-로그인페이지입니다.
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<head>
+			<meta charset="UTF-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<link
+				rel="stylesheet"
+				href="{% static 'css/login.css'%}"
+				type="text/css"
+			/>
+			<title>Login</title>
+		</head>
+	</head>
+	<body>
+		<div id="LoginWrapper">
+			<img id="LoginPicture" src="../../static/img/LoginImage.svg" />
+			<section id="LoginContainer">
+				<section class="LoginTop">
+					<img src="../../static/img/logoIcon.svg" />
+					<div class="TopText">만나서 반가워요 !</div>
+				</section>
+				<form class="LoginInputs">
+					<p>로그인</p>
+					<input type="text" name="user_id" placeholder="이메일" id="ID" />
+					<p>비밀번호</p>
+					<input
+						type="password"
+						name="user_id"
+						placeholder="비밀번호"
+						id="PW"
+					/>
+					<button class="GoMainBtn">시작하기</button>
+				</form>
+				<section class="LoginBottom">
+					<hr />
+					<div class="BottomText">
+						<p>아직 계정이 없으신가요?</p>
+						<button class="GoSignupBtn" onClick="location.href='login.html'">
+							회원가입 하기
+						</button>
+					</div>
+				</section>
+			</section>
+		</div>
+	</body>
+</html>

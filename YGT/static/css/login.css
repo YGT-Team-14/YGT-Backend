@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+#LoginWrapper {
+	display: flex;
+	justify-content: space-between;
+}
+#LoginPicture {
+	width: 1024px;
+	height: 1024px;
+	background-color: #f4de79;
+}
+#LoginContainer {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.LoginTop {
+	margin-top: 92px;
+}
+.TopText {
+	color: #569eb8;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px;
+	margin: 0 200px 30px 0;
+}
+.LoginInputs {
+	display: flex;
+	flex-direction: column;
+}
+input {
+	width: 356px;
+	height: 56px;
+	margin: 20px 0 44px 0;
+	color: #d9d9d9;
+	font-weight: 400;
+	font-size: 14px;
+	background-color: #f4f5f4;
+	border-style: none;
+	padding-left: 20px;
+}
+.GoMainBtn {
+	width: 376px;
+	height: 56px;
+	border-style: none;
+	color: #ffffff;
+	background-color: #569eb8;
+	font-size: 16px;
+}
+.LoginBottom {
+	display: flex;
+	flex-direction: column;
+}
+hr {
+	width: 370px;
+	height: 0px;
+	border: 1px solid #f4f5f4;
+	background-color: #f4f5f4;
+	margin-top: 40px;
+}
+.BottomText {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.GoSignupBtn {
+	color: #569eb8;
+	border: none;
+	background-color: transparent;
+	font-weight: 400;
+	font-size: 16px;
+}

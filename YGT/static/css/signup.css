@@ -1,0 +1,68 @@
+* {
+	font-family: 'Noto Sans KR';
+	outline: none;
+}
+#SignupWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+}
+.SignupTitle {
+	color: #569eb8;
+	font-weight: 700;
+	font-size: 30px;
+	margin-top: 70px;
+}
+input {
+	font-weight: 400;
+	font-size: 16px;
+}
+.SignupInputs {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+.SignupInputs input {
+	width: 355px;
+	height: 57px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	border: 2px solid #d9d9d9;
+}
+.InputDetails input {
+	width: 172px;
+	height: 57px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	border: 2px solid #d9d9d9;
+}
+.SignupBtn {
+	width: 380px;
+	height: 56px;
+	border: none;
+	background-color: #569eb8;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 16px;
+	margin-top: 10px;
+}
+hr {
+	width: 370px;
+	height: 0px;
+	border: 1px solid #f4f5f4;
+	background-color: #f4f5f4;
+	margin-top: 40px;
+}
+.BottomText {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+.GoLoginBtn {
+	color: #569eb8;
+	border: none;
+	background-color: transparent;
+	font-weight: 400;
+	font-size: 16px;
+}
